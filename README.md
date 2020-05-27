@@ -5,9 +5,9 @@
   * Python3.6 trở lên
   * Folder chứa kết quả khi chạy AndroPyTool
 ## Chạy
-  * Đầu tiên phải tải file  hoặc clone và chuyển file này vào thư mục kết quả sau khi chạy AndroPyTool là thư mục chưa file apk trước khi chạy AndroPyTool, gọi thư mục này là A
-  
+  * Đầu tiên phải tải file [tool.py](https://github.com/viocuong/athdh/blob/master/tool.py)
   * Mở terminal tại thư mục A và chạy các lệnh
+### Clone về nếu chưa tải file [tool.py](https://github.com/viocuong/athdh/blob/master/tool.py)
       Cài các modules cần thiết
       $ python3 tool.py -i
       
