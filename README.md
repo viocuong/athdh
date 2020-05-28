@@ -4,12 +4,19 @@
   * Hệ điều hành Ubuntu hoắc Windows
   * Python3.6 trở lên
   * Folder chứa kết quả khi chạy AndroPyTool
-## Chạy
-  * Đầu tiên phải tải file [tool.py](https://github.com/viocuong/athdh/blob/master/tool.py)
-  * Mở terminal tại thư mục A và chạy các lệnh
-### Clone về nếu chưa tải file [tool.py](https://github.com/viocuong/athdh/blob/master/tool.py)
-      Cài các modules cần thiết
-      $ python3 tool.py -i
+### Clone về và coppy sang Folder kết quả
+      Mở Terminal tại folder kết quả sau khi chạy AndroPyTool
+      $ git clone https://github.com/viocuong/athdh.git
+      $ cp athdh/tool.py ./
+### Cài các module cần thiết
+      $ sudo apt install python3-pip -y
+      $ sudo pip3 insatll numpy
+      $ sudo pip3 install matplotlib
+      $ sudo pip3 install pandas
+      $ sudo pip3 install pathlib
+
+
+  
       
       
       
