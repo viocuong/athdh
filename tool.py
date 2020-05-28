@@ -10,23 +10,16 @@ import re
 
 data = []
 def UsedOpcode(data):
-    Max = max(data, key=data.get)
-    Min = min(data, key=data.get)
-    Sum = len(data)
+    Max,Min,Sum= max(data, key=data.get), min(data, key=data.get), len(data)
     res = "Opcode su dung nhieu nhat: "+str(Max)+" "+str(data[Max])+"\nOpcode su dung it nhat: "+str(
         Min)+" "+str(data[Min])+"\nTong so opcode: "+str(Sum)
     return res
 
-
 def UsedApicall(data):
-    Max = max(data, key=data.get)
-    Min = min(data, key=data.get)
-    Sum = len(data)
+    Max,Min,Sum = max(data, key=data.get), min(data, key=data.get), len(data)
     res = "Api call su dung nhieu nhat: "+str(Max)+" "+str(data[Max])+"\nApi call su dung it nhat: "+str(
         Min)+" "+str(data[Min])+"\nTong so api call: "+str(Sum)
     return res
-
-
 def MaxLenString(data):
     Max = 0
     res = ""
