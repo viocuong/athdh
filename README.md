@@ -1,5 +1,5 @@
 # Công cụ hỗ trợ thống kê dữ liệu hành vi malware
-  Công cụ giúp thống kê dữ liệu trích xuất được từ công cụ AndroPyTool, Vẽ biểu đồ trực quan các những trường quan trọng
+  Công cụ giúp thống kê, vẽ biểu đồ từ dữ liệu trích xuất được từ công cụ AndroPyTool
 # Yêu cầu
   * Hệ điều hành Ubuntu hoắc Windows
   * Python3.6 trở lên
