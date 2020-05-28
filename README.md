@@ -4,7 +4,7 @@
   * Hệ điều hành Ubuntu hoắc Windows
   * Python3.6 trở lên
   * Folder chứa kết quả khi chạy AndroPyTool
-### Clone về và coppy sang Folder kết quả
+### Clone và coppy sang Folder kết quả
       Mở Terminal tại folder kết quả sau khi chạy AndroPyTool
       $ git clone https://github.com/viocuong/athdh.git
       $ cp athdh/tool.py ./
