@@ -40,7 +40,7 @@ def getDataAnalysis(data):
     print(UsedApicall(data['Static_analysis']['API calls']))
     print('############################################')
     print('Chuoi ky tu dai nhat trong doan ma: ' +
-          MaxLenString(data['Static_analysis']['Opcodes']))
+          MaxLenString(data['Static_analysis']['Strings']))
 
 ####### CHARTING ######################################################################
 
