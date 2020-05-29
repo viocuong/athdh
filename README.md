@@ -10,7 +10,7 @@
       $ cp athdh/tool.py ./
 ### Cài các module cần thiết
       $ sudo apt install python3-pip -y
-      $ sudo pip3 insatll numpy
+      $ sudo pip3 install numpy
       $ sudo pip3 install matplotlib
       $ sudo pip3 install pandas
       $ sudo pip3 install pathlib
