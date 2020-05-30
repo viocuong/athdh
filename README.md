@@ -22,13 +22,14 @@
       $ python3 tool.py -o
 ### Vẽ biểu đồ kết hợp
 #### tạo một folder chứa 4 file output trong thư mục Features_files của 4 thành viên trong nhóm
-      ví dụ folder là output, gồm các file là:
+##### ví dụ folder là output, gồm các file là:
 ##### 1 04c12809d3b1809c9980bd1e3e11e0f5-analysis.json
 ##### 2 04c12809d3b1809c9980bd1e3e11e0f6-analysis.json
 ##### 3 04c12809d3b1809c9980bd1e3e11e0f7-analysis.json
 ##### 4 04c12809d3b1809c9980bd1e3e11e0f8-analysis.json
-
-      $ python3 tool.py -c  
+##### Để vẽ biểu đồ của trường API calls
+      $ python3 tool.py -c 'API calls' -fo output
+##### biểu đồ này vẽ từ các api calls có mặt trong cả 4 file 
 
 #### Để xem các đối số khác
       $ python3 tool.py -h
