@@ -20,6 +20,16 @@
 ### Vẽ biều đồ
 #### Ví dụ vẽ biểu đồ các Opcodes được sử dụng
       $ python3 tool.py -o
+### Vẽ biểu đồ kết hợp
+#### tạo một folder chứa 4 file output trong thư mục Features_files của 4 thành viên trong nhóm
+      ví dụ folder là output, gồm các file là:
+##### 1 04c12809d3b1809c9980bd1e3e11e0f5-analysis.json
+##### 2 04c12809d3b1809c9980bd1e3e11e0f6-analysis.json
+##### 3 04c12809d3b1809c9980bd1e3e11e0f7-analysis.json
+##### 4 04c12809d3b1809c9980bd1e3e11e0f8-analysis.json
+
+      $ python3 tool.py -c  
+
 #### Để xem các đối số khác
       $ python3 tool.py -h
       
