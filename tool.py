@@ -40,9 +40,69 @@ def getDataAnalysis(data):
     print(UsedApicall(data['Static_analysis']['API calls']))
     print('############################################')
     print('Chuoi ky tu dai nhat trong doan ma: ' +
-          MaxLenString(data['Static_analysis']['Opcodes']))
+          MaxLenString(data['Static_analysis']['Strings']))
 
 ####### CHARTING ######################################################################
+def chartingCombind(foldername,field):
+    height1 = []
+    height2 = []
+    height3=[]
+    height4=[]
+    labels = []
+    barWidth = 0.15
+    # sort by len string
+    path = Path(foldername +"/")
+    folder = os.getcwd()+"/"+foldername
+    DATA=dict()
+    DATAA=dict()
+    labels=[]
+    Count=0
+    for file in os.listdir(folder):
+        if(re.search("json$",file)):
+            file_to_open=path/file
+            f=open(file_to_open)
+            data=json.load(f)
+            dataField=data['Static_analysis'].get(field)
+            DATAA[Count]=dataField
+            for i in sorted(dataField, key=len, reverse=True):
+                if(i in DATA.keys()):
+                    DATA[i]+=1
+                else:
+                    DATA[i]=0
+                    DATA[i]+=1
+            Count+=1
+    
+    for i in DATA:
+        if(DATA[i]==4):
+            S=0
+            for j in DATAA:
+                if(DATAA[j][i]): S+=1
+            if(S==4):
+                height1.append(DATAA[0][i])
+                height2.append(DATAA[1][i])
+                height3.append(DATAA[2][i])
+                height4.append(DATAA[3][i])
+                labels.append(i)
+    n= len(height1)
+    x = np.arange(n)
+    x1 = [i+barWidth for i in x]
+    x2 = [i+barWidth for i in x1]
+    x3 = [i+barWidth for i in x2]
+    
+    plt.bar(x, height1, color='#ff5200', width=barWidth,
+            edgecolor='red', label='1')
+    plt.bar(x1, height2, color='#ff5200', width=barWidth,
+            edgecolor='white', label='2')
+    plt.bar(x2, height3, color='#ff5200', width=barWidth,
+            edgecolor='white', label='3')
+    plt.bar(x3, height4, color='#ff5200', width=barWidth,
+            edgecolor='white', label='4')
+    plt.xlabel('Combine', fontweight='bold')
+    plt.xticks([x + barWidth for x in range(len(height2))], labels)
+    plt.xticks(x, labels, rotation=90)
+    plt.subplots_adjust(bottom=0.4)
+    plt.subplots_adjust(top=1)
+    plt.show()
 
 
 def charting(data, field):
@@ -132,6 +192,8 @@ def Process():
                        help='chart API Call', action='store_true')
     paser.add_argument('-s', '--string', help='chart string',
                        action='store_true')
+    paser.add_argument('-c','--combines',help='charting combines')
+    paser.add_argument('-fo','--folder',help='folder')
     args = paser.parse_args()
     flag = 1
     if args.installenv:
@@ -143,6 +205,12 @@ def Process():
     else:
         getData()
         getDataAnalysis(data)
+        if args.combines:
+            if not args.folder:
+                print('Can doi so -fo [foldername]')
+                sys.exit()
+                
+            chartingCombind(args.folder,args.combines)
         if args.virustotal:
             chartingVT()
         if args.opcodes:
