@@ -64,7 +64,7 @@ def chartingCombind(foldername,field):
             data=json.load(f)
             dataField=data['Static_analysis'].get(field)
             DATAA[Count]=dataField
-            for i in sorted(dataField, key=len, reverse=True):
+            for i in dataField:
                 if(i in DATA.keys()):
                     DATA[i]+=1
                 else:
@@ -89,13 +89,13 @@ def chartingCombind(foldername,field):
     x2 = [i+barWidth for i in x1]
     x3 = [i+barWidth for i in x2]
     
-    plt.bar(x, height1, color='#ff5200', width=barWidth,
+    plt.bar(x, height1, color='#45046a', width=barWidth,
             edgecolor='red', label='1')
-    plt.bar(x1, height2, color='#ff5200', width=barWidth,
+    plt.bar(x1, height2, color='#fc8210', width=barWidth,
             edgecolor='white', label='2')
-    plt.bar(x2, height3, color='#ff5200', width=barWidth,
+    plt.bar(x2, height3, color='#162447', width=barWidth,
             edgecolor='white', label='3')
-    plt.bar(x3, height4, color='#ff5200', width=barWidth,
+    plt.bar(x3, height4, color='#e7b2a5', width=barWidth,
             edgecolor='white', label='4')
     plt.xlabel('Combine', fontweight='bold')
     plt.xticks([x + barWidth for x in range(len(height2))], labels)
